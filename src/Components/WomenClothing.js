@@ -2,7 +2,7 @@ import Header from "./Header";
 import {connect} from "react-redux"
 import Product from "./Product"
 import store from "./../store";
-import Clothing from "./../assets/Clothing.json"
+// import Clothing from "./../assets/Clothing.json"
 
 
 function WomenClothing({womenClothing}) {
@@ -10,7 +10,7 @@ function WomenClothing({womenClothing}) {
         <div>
             <Header className="header" headerName="Women Apparel"/>
             <ul>
-                {Clothing.map((cloth)=>{
+                {womenClothing.map((cloth)=>{
                     return <Product key={cloth.id} productName={cloth.name}/>
                 })}
             </ul>
@@ -24,4 +24,4 @@ const mapStateToProps = (state)=>{
     };
 };
 
-export default WomenClothing;
+export default connect(mapStateToProps)(WomenClothing);
