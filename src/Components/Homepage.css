@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+}
+
+.main div{
+    height: 80vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
